@@ -14,6 +14,7 @@ menu.clock=Clock
 attiny84.name=ATtiny84
 
 attiny84.upload.tool=arduino:arduinoisp
+attiny84.bootloader.tool=arduino:avrdude
 
 attiny84.upload.maximum_size=8192
 attiny84.upload.maximum_data_size=512
@@ -26,12 +27,11 @@ attiny84.build.core=tiny
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny84.menu.clock.at8=8 MHz (internal oscillator; BOD disabled)
-attiny84.menu.clock.at8.low_fuses=0xE2
-attiny84.menu.clock.at8.high_fuses=0xD7
-attiny84.menu.clock.at8.extended_fuses=0xFF
+attiny84.menu.clock.at8.bootloader.low_fuses=0xE2
+attiny84.menu.clock.at8.bootloader.high_fuses=0xD7
+attiny84.menu.clock.at8.bootloader.extended_fuses=0xFF
 attiny84.menu.clock.at8.path=empty
 attiny84.menu.clock.at8.file=empty84at8.hex
-attiny84.menu.clock.at8.tool=arduino:avrdude
 attiny84.menu.clock.at8.build.f_cpu=8000000L
 
 # Default clock (slowly rising power; long delay to clock; 8 MHz internal; divide clock by 8)
@@ -40,12 +40,11 @@ attiny84.menu.clock.at8.build.f_cpu=8000000L
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny84.menu.clock.at1=1 MHz (internal oscillator; BOD disabled)
-attiny84.menu.clock.at1.low_fuses=0x62
-attiny84.menu.clock.at1.high_fuses=0xD7
-attiny84.menu.clock.at1.extended_fuses=0xFF
+attiny84.menu.clock.at1.bootloader.low_fuses=0x62
+attiny84.menu.clock.at1.bootloader.high_fuses=0xD7
+attiny84.menu.clock.at1.bootloader.extended_fuses=0xFF
 attiny84.menu.clock.at1.path=empty
 attiny84.menu.clock.at1.file=empty84at1.hex
-attiny84.menu.clock.at1.tool=arduino:avrdude
 attiny84.menu.clock.at1.build.f_cpu=1000000L
 
 # Frequency 8.0- MHz; Start-up time PWRDWN/RESET: 16K CK/14 CK + 65 ms; [CKSEL=1111 SUT=11]
@@ -53,12 +52,11 @@ attiny84.menu.clock.at1.build.f_cpu=1000000L
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 attiny84.menu.clock.at16=16 MHz (external crystal; 4.3 V BOD)
-attiny84.menu.clock.at16.low_fuses=0xFF
-attiny84.menu.clock.at16.high_fuses=0xD4
-attiny84.menu.clock.at16.extended_fuses=0xFF
+attiny84.menu.clock.at16.bootloader.low_fuses=0xFF
+attiny84.menu.clock.at16.bootloader.high_fuses=0xD4
+attiny84.menu.clock.at16.bootloader.extended_fuses=0xFF
 attiny84.menu.clock.at16.path=empty
 attiny84.menu.clock.at16.file=empty84at16.hex
-attiny84.menu.clock.at16.tool=arduino:avrdude
 attiny84.menu.clock.at16.build.f_cpu=16000000L
 
 ###########################################################################
@@ -66,6 +64,7 @@ attiny84.menu.clock.at16.build.f_cpu=16000000L
 attiny44.name=ATtiny44
 
 attiny44.upload.tool=arduino:arduinoisp
+attiny44.bootloader.tool=arduino:avrdude
 
 attiny44.upload.maximum_size=4096
 attiny44.upload.maximum_data_size=256
@@ -79,12 +78,11 @@ attiny44.build.core=tiny
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny44.menu.clock.at8=8 MHz (internal oscillator; BOD disabled)
-attiny44.menu.clock.at8.low_fuses=0xE2
-attiny44.menu.clock.at8.high_fuses=0xD7
-attiny44.menu.clock.at8.extended_fuses=0xFF
+attiny44.menu.clock.at8.bootloader.low_fuses=0xE2
+attiny44.menu.clock.at8.bootloader.high_fuses=0xD7
+attiny44.menu.clock.at8.bootloader.extended_fuses=0xFF
 attiny44.menu.clock.at8.path=empty
 attiny44.menu.clock.at8.file=empty44at8.hex
-attiny44.menu.clock.at8.tool=arduino:avrdude
 attiny44.menu.clock.at8.build.f_cpu=8000000L
 
 # Default clock (slowly rising power; long delay to clock; 8 MHz internal; divide clock by 8)
@@ -93,12 +91,11 @@ attiny44.menu.clock.at8.build.f_cpu=8000000L
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny44.menu.clock.at1=1 MHz (internal oscillator; BOD disabled)
-attiny44.menu.clock.at1.low_fuses=0x62
-attiny44.menu.clock.at1.high_fuses=0xD7
-attiny44.menu.clock.at1.extended_fuses=0xFF
+attiny44.menu.clock.at1.bootloader.low_fuses=0x62
+attiny44.menu.clock.at1.bootloader.high_fuses=0xD7
+attiny44.menu.clock.at1.bootloader.extended_fuses=0xFF
 attiny44.menu.clock.at1.path=empty
 attiny44.menu.clock.at1.file=empty44at1.hex
-attiny44.menu.clock.at1.tool=arduino:avrdude
 attiny44.menu.clock.at1.build.f_cpu=1000000L
 
 
@@ -107,6 +104,7 @@ attiny44.menu.clock.at1.build.f_cpu=1000000L
 attiny24.name=ATtiny24
 
 attiny24.upload.tool=arduino:arduinoisp
+attiny24.bootloader.tool=arduino:avrdude
 
 attiny24.upload.maximum_size=2048
 attiny24.upload.maximum_data_size=128
@@ -119,18 +117,18 @@ attiny24.build.core=tiny
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 attiny24.menu.clock.at16=16 MHz (external crystal; BOD disabled)
-attiny24.menu.clock.at16.low_fuses=0xFF
-attiny24.menu.clock.at16.high_fuses=0xD7
-attiny24.menu.clock.at16.extended_fuses=0xFF
+attiny24.menu.clock.at16.bootloader.low_fuses=0xFF
+attiny24.menu.clock.at16.bootloader.high_fuses=0xD7
+attiny24.menu.clock.at16.bootloader.extended_fuses=0xFF
 attiny24.menu.clock.at16.path=empty
 attiny24.menu.clock.at16.file=empty24at16.hex
-attiny24.menu.clock.at16.tool=arduino:avrdude
 attiny24.menu.clock.at16.build.f_cpu=16000000L
 
 ##########################################################################
 attiny85.name=ATtiny85
 
 attiny85.upload.tool=arduino:arduinoisp
+attiny85.bootloader.tool=arduino:avrdude
 
 attiny85.upload.maximum_size=8192
 attiny85.upload.maximum_data_size=512
@@ -142,12 +140,11 @@ attiny85.build.core=tiny
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny85.menu.clock.at8=8 MHz (internal oscillator; BOD disabled)
-attiny85.menu.clock.at8.low_fuses=0xE2
-attiny85.menu.clock.at8.high_fuses=0xD7
-attiny85.menu.clock.at8.extended_fuses=0xFF
+attiny85.menu.clock.at8.bootloader.low_fuses=0xE2
+attiny85.menu.clock.at8.bootloader.high_fuses=0xD7
+attiny85.menu.clock.at8.bootloader.extended_fuses=0xFF
 attiny85.menu.clock.at8.path=empty
 attiny85.menu.clock.at8.file=empty85at8.hex
-attiny85.menu.clock.at8.tool=arduino:avrdude
 attiny85.menu.clock.at8.build.f_cpu=8000000L
 
 # Default clock (slowly rising power; long delay to clock; 8 MHz internal; divide clock by 8)
@@ -156,12 +153,11 @@ attiny85.menu.clock.at8.build.f_cpu=8000000L
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny85.menu.clock.at1=1 MHz (internal oscillator; BOD disabled)
-attiny85.menu.clock.at1.low_fuses=0x62
-attiny85.menu.clock.at1.high_fuses=0xD7
-attiny85.menu.clock.at1.extended_fuses=0xFF
+attiny85.menu.clock.at1.bootloader.low_fuses=0x62
+attiny85.menu.clock.at1.bootloader.high_fuses=0xD7
+attiny85.menu.clock.at1.bootloader.extended_fuses=0xFF
 attiny85.menu.clock.at1.path=empty
 attiny85.menu.clock.at1.file=empty85at1.hex
-attiny85.menu.clock.at1.tool=arduino:avrdude
 attiny85.menu.clock.at1.build.f_cpu=1000000L
 
 # WD. Osc. 128 kHz; Start-up time PWRDWN/RESET: 6 CK/14 CK + 0 ms; [CKSEL=0100 SUT=00]
@@ -169,12 +165,11 @@ attiny85.menu.clock.at1.build.f_cpu=1000000L
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 attiny85.menu.clock.at128k=128 KHz (watchdog oscillator; 1.8 V BOD)
-attiny85.menu.clock.at128k.low_fuses=0xC4
-attiny85.menu.clock.at128k.high_fuses=0xD6
-attiny85.menu.clock.at128k.extended_fuses=0xFF
+attiny85.menu.clock.at128k.bootloader.low_fuses=0xC4
+attiny85.menu.clock.at128k.bootloader.high_fuses=0xD6
+attiny85.menu.clock.at128k.bootloader.extended_fuses=0xFF
 attiny85.menu.clock.at128k.path=empty
 attiny85.menu.clock.at128k.file=empty85at1.hex
-attiny85.menu.clock.at128k.tool=arduino:avrdude
 attiny85.menu.clock.at128k.build.f_cpu==128000L
 
 # Ext. Crystal Osc.; Frequency 8.0- MHz; Start-up time PWRDWN/RESET: 16K CK/14 CK + 65 ms; [CKSEL=1111 SUT=11]
@@ -182,12 +177,11 @@ attiny85.menu.clock.at128k.build.f_cpu==128000L
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 attiny85.menu.clock.at16 =16 MHz (external crystal; 4.3 V BOD)
-attiny85.menu.clock.at16.low_fuses=0xFF
-attiny85.menu.clock.at16.high_fuses=0xD4
-attiny85.menu.clock.at16.extended_fuses=0xFF
+attiny85.menu.clock.at16.bootloader.low_fuses=0xFF
+attiny85.menu.clock.at16.bootloader.high_fuses=0xD4
+attiny85.menu.clock.at16.bootloader.extended_fuses=0xFF
 attiny85.menu.clock.at16.path=empty
 attiny85.menu.clock.at16.file=empty85at16.hex
-attiny85.menu.clock.at16.tool=arduino:avrdude
 attiny85.menu.clock.at16.build.f_cpu=16000000L
 
 # PLL Clock; Start-up time PWRDWN/RESET: 1K CK/14 CK + 4 ms; [CKSEL=0001 SUT=00]
@@ -195,12 +189,11 @@ attiny85.menu.clock.at16.build.f_cpu=16000000L
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 attiny85.menu.clock.at16pll=16 MHz (internal PLL; 4.3 V BOD)
-attiny85.menu.clock.at16pll.low_fuses=0xC1
-attiny85.menu.clock.at16pll.high_fuses=0xD4
-attiny85.menu.clock.at16pll.extended_fuses=0xFF
+attiny85.menu.clock.at16pll.bootloader.low_fuses=0xC1
+attiny85.menu.clock.at16pll.bootloader.high_fuses=0xD4
+attiny85.menu.clock.at16pll.bootloader.extended_fuses=0xFF
 attiny85.menu.clock.at16pll.path=empty
 attiny85.menu.clock.at16pll.file=empty85at16.hex
-attiny85.menu.clock.at16pll.tool=arduino:avrdude
 attiny85.menu.clock.at16pll.build.f_cpu=16000000L
 
 
@@ -209,6 +202,7 @@ attiny85.menu.clock.at16pll.build.f_cpu=16000000L
 attiny45.name=ATtiny45
 
 attiny45.upload.tool=arduino:arduinoisp
+attiny45.bootloader.tool=arduino:avrdude
 
 attiny45.upload.maximum_size=4096
 attiny45.upload.maximum_data_size=256
@@ -222,12 +216,11 @@ attiny45.build.core=tiny
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny45.menu.clock.at8=8 MHz
-attiny45.menu.clock.at8.low_fuses=0xE2
-attiny45.menu.clock.at8.high_fuses=0xD7
-attiny45.menu.clock.at8.extended_fuses=0xFF
+attiny45.menu.clock.at8.bootloader.low_fuses=0xE2
+attiny45.menu.clock.at8.bootloader.high_fuses=0xD7
+attiny45.menu.clock.at8.bootloader.extended_fuses=0xFF
 attiny45.menu.clock.at8.path=empty
 attiny45.menu.clock.at8.file=empty45at8.hex
-attiny45.menu.clock.at8.tool=arduino:avrdude
 attiny45.menu.clock.at8.build.f_cpu=8000000L
 
 # Default clock (slowly rising power; long delay to clock; 8 MHz internal; divide clock by 8)
@@ -236,12 +229,11 @@ attiny45.menu.clock.at8.build.f_cpu=8000000L
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny45.menu.clock.at1=1 MHz
-attiny45.menu.clock.at1.low_fuses=0x62
-attiny45.menu.clock.at1.high_fuses=0xD7
-attiny45.menu.clock.at1.extended_fuses=0xFF
+attiny45.menu.clock.at1.bootloader.low_fuses=0x62
+attiny45.menu.clock.at1.bootloader.high_fuses=0xD7
+attiny45.menu.clock.at1.bootloader.extended_fuses=0xFF
 attiny45.menu.clock.at1.path=empty
 attiny45.menu.clock.at1.file=empty45at1.hex
-attiny45.menu.clock.at1.tool=arduino:avrdude
 attiny45.menu.clock.at1.build.f_cpu=1000000L
 
 ###########################################################################
@@ -249,6 +241,7 @@ attiny45.menu.clock.at1.build.f_cpu=1000000L
 attiny25.name=ATtiny25
 
 attiny25.upload.tool=arduino:arduinoisp
+attiny25.bootloader.tool=arduino:avrdude
 
 attiny25.upload.maximum_size=2048
 attiny25.upload.maximum_data_size=128
@@ -262,12 +255,11 @@ attiny25.build.core=tiny
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny25.menu.clock.at8=8 MHz
-attiny25.menu.clock.at8.low_fuses=0xE2
-attiny25.menu.clock.at8.high_fuses=0xD7
-attiny25.menu.clock.at8.extended_fuses=0xFF
+attiny25.menu.clock.at8.bootloader.low_fuses=0xE2
+attiny25.menu.clock.at8.bootloader.high_fuses=0xD7
+attiny25.menu.clock.at8.bootloader.extended_fuses=0xFF
 attiny25.menu.clock.at8.path=empty
 attiny25.menu.clock.at8.file=empty25at8.hex
-attiny25.menu.clock.at8.tool=arduino:avrdude
 attiny25.menu.clock.at8.build.f_cpu=8000000L
 
 # Default clock (slowly rising power; long delay to clock; 8 MHz internal)
@@ -275,12 +267,11 @@ attiny25.menu.clock.at8.build.f_cpu=8000000L
 # Brown-out detection disabled; [BODLEVEL=111]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny25.menu.clock.at1=1 MHz
-attiny25.menu.clock.at1.low_fuses=0x62
-attiny25.menu.clock.at1.high_fuses=0xD7
-attiny25.menu.clock.at1.extended_fuses=0xFF
+attiny25.menu.clock.at1.bootloader.low_fuses=0x62
+attiny25.menu.clock.at1.bootloader.high_fuses=0xD7
+attiny25.menu.clock.at1.bootloader.extended_fuses=0xFF
 attiny25.menu.clock.at1.path=empty
 attiny25.menu.clock.at1.file=empty25at1.hex
-attiny25.menu.clock.at1.tool=arduino:avrdude
 attiny25.menu.clock.at1.build.f_cpu=1000000L
 
 ###########################################################################
@@ -288,6 +279,7 @@ attiny25.menu.clock.at1.build.f_cpu=1000000L
 attiny4313.name=ATtiny4313 
 
 attiny4313.upload.tool=arduino:arduinoisp
+attiny4313.bootloader.tool=arduino:avrdude
 
 attiny4313.upload.maximum_size=4096
 attiny4313.upload.maximum_data_size=256
@@ -302,12 +294,11 @@ attiny4313.build.core=tiny
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny4313.menu.clock.at8=@ 8 MHz
-attiny4313.menu.clock.at8.low_fuses=0xE4
-attiny4313.menu.clock.at8.high_fuses=0x9F
-attiny4313.menu.clock.at8.extended_fuses=0xFF
+attiny4313.menu.clock.at8.bootloader.low_fuses=0xE4
+attiny4313.menu.clock.at8.bootloader.high_fuses=0x9F
+attiny4313.menu.clock.at8.bootloader.extended_fuses=0xFF
 attiny4313.menu.clock.at8.path=empty
 attiny4313.menu.clock.at8.file=empty4313at8.hex
-attiny4313.menu.clock.at8.tool=arduino:avrdude
 attiny4313.menu.clock.at8.build.f_cpu=8000000L
 
 # Default clock (slowly rising power; long delay to clock; 8 MHz internal; divide clock by 8)
@@ -317,12 +308,11 @@ attiny4313.menu.clock.at8.build.f_cpu=8000000L
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny4313.menu.clock.at1=@ 1 MHz
-attiny4313.menu.clock.at1.low_fuses=0x64
-attiny4313.menu.clock.at1.high_fuses=0x9F
-attiny4313.menu.clock.at1.extended_fuses=0xFF
+attiny4313.menu.clock.at1.bootloader.low_fuses=0x64
+attiny4313.menu.clock.at1.bootloader.high_fuses=0x9F
+attiny4313.menu.clock.at1.bootloader.extended_fuses=0xFF
 attiny4313.menu.clock.at1.path=empty
 attiny4313.menu.clock.at1.file=empty4313at1.hex
-attiny4313.menu.clock.at1.tool=arduino:avrdude
 attiny4313.menu.clock.at1.build.f_cpu=1000000L
 
 ###########################################################################
@@ -330,6 +320,7 @@ attiny4313.menu.clock.at1.build.f_cpu=1000000L
 attiny2313.name=ATtiny2313
 
 attiny2313.upload.tool=arduino:arduinoisp
+attiny2313.bootloader.tool=arduino:avrdude
 
 attiny2313.upload.maximum_size=2048
 attiny2313.upload.maximum_data_size=128
@@ -344,12 +335,11 @@ attiny2313.build.core=tiny
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny2313.menu.clock.at8=8 MHz
-attiny2313.menu.clock.at8.low_fuses=0xE4
-attiny2313.menu.clock.at8.high_fuses=0x9F
-attiny2313.menu.clock.at8.extended_fuses=0xFF
+attiny2313.menu.clock.at8.bootloader.low_fuses=0xE4
+attiny2313.menu.clock.at8.bootloader.high_fuses=0x9F
+attiny2313.menu.clock.at8.bootloader.extended_fuses=0xFF
 attiny2313.menu.clock.at8.path=empty
 attiny2313.menu.clock.at8.file=empty2313at8.hex
-attiny2313.menu.clock.at8.tool=arduino:avrdude
 attiny2313.menu.clock.at8.build.f_cpu=8000000L
 
 # Default clock (slowly rising power; long delay to clock; 8 MHz internal; divide clock by 8)
@@ -359,10 +349,9 @@ attiny2313.menu.clock.at8.build.f_cpu=8000000L
 # Serial program downloading (SPI) enabled; [SPIEN=0]
 # Preserve EEPROM memory through the Chip Erase cycle; [EESAVE=0]
 attiny2313.menu.clock.at1=1 MHz
-attiny2313.menu.clock.at1.low_fuses=0x64
-attiny2313.menu.clock.at1.high_fuses=0x9F
-attiny2313.menu.clock.at1.extended_fuses=0xFF
+attiny2313.menu.clock.at1.bootloader.low_fuses=0x64
+attiny2313.menu.clock.at1.bootloader.high_fuses=0x9F
+attiny2313.menu.clock.at1.bootloader.extended_fuses=0xFF
 attiny2313.menu.clock.at1.path=empty
 attiny2313.menu.clock.at1.file=empty2313at1.hex
-attiny2313.menu.clock.at1.tool=arduino:avrdude
 attiny2313.menu.clock.at1.build.f_cpu=1000000L
